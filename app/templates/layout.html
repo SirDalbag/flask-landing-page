@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="shortcut icon" type="image/png" href="{{ url_for('static', filename='img/logo.svg') }}" >
+    <title>FiresVPN</title>
+    <style>
+      @font-face {
+          font-family: 'Rubik';
+          src: url("{{ url_for('static', filename='fonts/rubik.ttf') }}") format('truetype');
+      }
+    </style>
+</head>
+<body>
+    <div class="container mt-2">
+      <header class="d-flex flex-wrap justify-content-between gap-5 py-3 mb-4">
+        <a href="/" class="d-flex align-items-center mb-md-0 md-auto link-body-emphasis text-decoration-none">
+          <img src="{{ url_for('static', filename='img/logo.svg')}}" width="36" height="36">
+          <div class="nav-link fw-semibold fs-5 pt-2 ps-2">
+            Fires<span class="fw-bold">VPN</span>
+          </div>
+        </a>
+        <ul class="nav col-12 col-md-auto justify-content-center gap-3 mb-md-0 fs-5">
+          <li><a href="javascript:void(0);" onclick="scrollToElement('about')" class="nav-link px-2 fw-light gray">About</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToElement('features')" class="nav-link px-2 fw-light gray">Features</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToElement('pricing')" class="nav-link px-2 fw-light gray">Pricing</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToElement('testimonials')" class="nav-link px-2 fw-light gray">Testimonials</a></li>
+          <li><a href="javascript:void(0);" onclick="scrollToElement('help')" class="nav-link px-2 fw-light gray">Help</a></li>
+        </ul>
+        <ul class="nav col-12 col-md-auto justify-content-center gap-3 mb-md-0">
+          <li><button type="button" class="btn fw-semibold fs-5 glow">Sign In</button></li>
+          <li><button type="button" class="btn fw-semibold fs-5 orange btn-outline-orange px-3 py-1">Sign Up</button></li>
+        </ul>
+      </header>
+    </div>
+    {% block content %}{% endblock %}
+    <div class="container">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 pt-5 my-5 border-top" id="help">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-md-0 md-auto link-body-emphasis text-decoration-none">
+            <img src="{{ url_for('static', filename='img/logo.svg')}}" width="36" height="36">
+            <div class="nav-link fw-semibold fs-5 pt-2 ps-2">
+              Fires<span class="fw-bold">VPN</span>
+            </div>
+          </a>
+          <p class="text-body-secondary fw-normal my-3"><span class="fw-semibold">FiresVPN</span> is a private virtual network that has unique features and has high security.</p>
+          <p class="text-body-secondary">© 2023 Fires<span class="fw-semibold">VPN</span></p>
+        </div>
+        <div class="col mb-1">
+        </div>
+        <div class="col mb-1">
+          <h5>Product</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="javascript:void(0);" onclick="scrollToElement('about')" class="nav-link p-0 text-body-secondary">Download</a></li>
+            <li class="nav-item mb-2"><a href="javascript:void(0);" onclick="scrollToElement('pricing')" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="javascript:void(0);" onclick="scrollToElement('testimonials')" class="nav-link p-0 text-body-secondary">Locations</a></li>
+            <li class="nav-item mb-2"><a href="javascript:void(0);" onclick="scrollToElement('testimonials')" class="nav-link p-0 text-body-secondary">Server</a></li>
+            <li class="nav-item mb-2"><a href="javascript:void(0);" onclick="scrollToElement('testimonials')" class="nav-link p-0 text-body-secondary">Countries</a></li>
+          </ul>
+        </div>
+        <div class="col mb-1">
+          <h5>Engage</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FiresVPN?</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQ</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Tutorials</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Privacy Policy</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Terms of Service</a></li>
+          </ul>
+        </div>
+        <div class="col mb-1">
+          <h5>Earn Money</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Affiliate</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Become Partner</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    <script src="{{ url_for('static', filename='bootstrap/js/bootstrap.bundle.min.js') }}" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

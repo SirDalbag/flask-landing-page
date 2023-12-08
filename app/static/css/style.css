@@ -1,0 +1,87 @@
+* {
+    font-family: 'Rubik';
+}
+
+.gray-bg {
+    background: linear-gradient(180deg, #F8F8F8 -45.04%, rgba(248, 248, 248, 0.00) 88.56%);
+}
+
+.gray {
+    color: #4F5665;
+}
+
+.orange {
+    color: #F53855;
+}
+
+.btn-outline-orange {
+    border-radius: 50px;
+    border: 1px solid #F53855;
+    transition: all 0.5s ease-out;
+}
+
+.btn-outline-orange:hover {
+    color: #ffffff;
+    background: #F53855;
+    border-color: #F53855;
+}
+
+.btn-orange {
+    color: #ffffff;
+    background: #F53855;
+    border-color: #F53855;
+    filter: drop-shadow(4px 4px 4px #F53855);
+    transition: all 0.5s ease-out;
+}
+
+.btn-orange:hover {
+    color: #F53855;
+    border: 1px solid #F53855;
+}
+
+.glow {
+    transition: all .2s ease-in-out; 
+}
+
+.glow:hover {
+    filter: drop-shadow(4px 4px 4px #F53855);
+}
+
+.grow { 
+    transition: all .2s ease-in-out; 
+}
+
+.grow:hover { 
+    transform: scale(1.1); 
+}
+
+.grow-sm { 
+    transition: all .2s ease-in-out; 
+}
+
+.grow-sm:hover { 
+    transform: scale(1.01); 
+}
+
+.nav-link {
+    transition: all 0.5s ease-out;
+}
+
+.nav-link:hover {
+    color: #F53855;
+}
+
+.card {
+    transition: all 0.5s ease-out;
+}
+
+.card:hover {
+    border-color: #F53855;
+}
+
+@media (max-width: 768px) {
+    .map {
+        height: 400px;
+        width: 450px;
+    }
+}

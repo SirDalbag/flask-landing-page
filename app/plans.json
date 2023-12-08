@@ -1,0 +1,5 @@
+[
+    {"id": 1, "plan": "Free Plan", "points": [true, true, true, true, false, false], "price": 0},
+    {"id": 2, "plan": "Standart Plan", "points": [true, true, true, true, true, false], "price": 9},
+    {"id": 3, "plan": "Premium Plan", "points": [true, true, true, true, true, true], "price": 12}
+]
